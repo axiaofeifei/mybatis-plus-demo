@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "d42ea244-56f6-4984-b0da-00171905b0a4",
+		"name": "mybatis-plus-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8082/hello/mybatis",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/hello/mybatis",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"hello",
+						"mybatis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8082/student/save",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/student/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"student",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8082/student/deleteById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/student/deleteById?id=11",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"student",
+						"deleteById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8082/student/updateById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/student/updateById",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"student",
+						"updateById"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8082/student/getById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/student/getById?id=12",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"student",
+						"getById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8082/student/getOneById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/student/getOneById?id=14",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"student",
+						"getOneById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8082/student/getOneByStuName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/student/getOneByStuName?stuName=tom",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"student",
+						"getOneByStuName"
+					],
+					"query": [
+						{
+							"key": "stuName",
+							"value": "tom"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8082/student/getStudentListBySex",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/student/getStudentListBySex?gender=女",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"student",
+						"getStudentListBySex"
+					],
+					"query": [
+						{
+							"key": "gender",
+							"value": "女"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8082/student/listStudentListByAge",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/student/listStudentListByAge?age=19",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"student",
+						"listStudentListByAge"
+					],
+					"query": [
+						{
+							"key": "age",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8082/student/testPage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/student/testPage",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"student",
+						"testPage"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
