@@ -38,6 +38,4 @@ public class Student implements Serializable {
 
     private LocalDate birthday;
 
-
-
 }

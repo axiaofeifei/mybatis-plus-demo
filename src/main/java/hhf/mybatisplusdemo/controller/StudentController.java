@@ -1,6 +1,8 @@
 package hhf.mybatisplusdemo.controller;
 
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import hhf.mybatisplusdemo.entity.Student;
@@ -161,19 +163,24 @@ public class StudentController {
 
 
 	@GetMapping("/testPage")
-	public void testPage(){
+	public JSON testPage(){
 		//第一个参数：当前页     第二个参数：页面大小
 		Page<Student> studentPage = new Page<>(1,4);
 		//设置条件
 		QueryWrapper<Student> queryWrapper = new QueryWrapper<>();
 		queryWrapper.eq("gender","女");
-
+		//查询
 		studentMapper.selectPage(studentPage,queryWrapper);
+		//控制台输出
 		System.out.println("总页数： " + studentPage.getPages());
 		System.out.println("总记录数： " + studentPage.getTotal());
-
-		System.out.println(studentPage.getRecords());
 		studentPage.getRecords().forEach(System.out::println);
+		//返回前端
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("total", studentPage.getTotal());
+		jsonObject.put("rows",studentPage.getRecords());
+		jsonObject.put("page", studentPage.getCurrent());
+		return jsonObject;
 
 	}
 
