@@ -157,11 +157,6 @@ public class StudentController {
 	/**
 	 * 测试分页查询
 	 */
-	@Resource
-	private StudentMapper studentMapper;
-
-
-
 	@GetMapping("/testPage")
 	public JSON testPage(){
 		//第一个参数：当前页     第二个参数：页面大小
@@ -169,8 +164,11 @@ public class StudentController {
 		//设置条件
 		QueryWrapper<Student> queryWrapper = new QueryWrapper<>();
 		queryWrapper.eq("gender","女");
+
+
+		iStudentService.page(studentPage,queryWrapper);
 		//查询
-		studentMapper.selectPage(studentPage,queryWrapper);
+
 		//控制台输出
 		System.out.println("总页数： " + studentPage.getPages());
 		System.out.println("总记录数： " + studentPage.getTotal());
